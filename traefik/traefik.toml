@@ -1,0 +1,10 @@
+# https://www.digitalocean.com/community/tutorials/how-to-use-traefik-as-a-reverse-proxy-for-docker-containers-on-ubuntu-16-04
+
+defaultEntryPoints = ["http"]
+
+[web]
+address = ":8080"
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
