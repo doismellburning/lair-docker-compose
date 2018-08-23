@@ -1,0 +1,18 @@
+version: '3'
+
+networks:
+  proxy:
+    external: true
+
+services:
+  hadashboard:
+    image: homeassistant/home-assistant:0.74.2
+    networks:
+      - proxy
+    volumes:
+      - "/srv/git/homeassistant-config:/config"
+      - "/etc/localtime:/etc/localtime:ro"
+    labels:
+      traefik.backend: "homeassistant"
+      traefik.port: 8123
+      traefik.frontend.rule: "Host:hass.srv.lair.doismellburning.co.uk"
