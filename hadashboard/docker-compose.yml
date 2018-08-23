@@ -1,0 +1,8 @@
+version: '3'
+services:
+  hadashboard:
+    image: acockburn/appdaemon:3.0.1
+    ports:
+      - "5050:5050"
+    volumes:
+      - "/srv/git/hadashboard:/conf"
