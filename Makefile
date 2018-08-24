@@ -8,3 +8,4 @@ install:
 	systemctl enable docker-compose@traefik
 	systemctl enable docker-compose@hadashboard
 	systemctl enable docker-compose@homeassistant
+	systemctl enable docker-compose@prometheus

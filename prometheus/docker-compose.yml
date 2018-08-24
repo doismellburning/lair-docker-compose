@@ -1,0 +1,17 @@
+version: '3'
+
+networks:
+  proxy:
+    external: true
+
+services:
+  prometheus:
+    image: prom/prometheus
+    networks:
+      - proxy
+    volumes:
+      - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+    labels:
+      traefik.backend: "prometheus"
+      traefik.port: 9090
+      traefik.frontend.rule: "Host:prometheus.srv.lair.doismellburning.co.uk"
