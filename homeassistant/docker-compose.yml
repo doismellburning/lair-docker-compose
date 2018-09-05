@@ -12,6 +12,8 @@ services:
     volumes:
       - "/srv/git/homeassistant-config:/config"
       - "/etc/localtime:/etc/localtime:ro"
+    devices:
+      - "/dev/ttyACM0"  # Z-Wave stick
     labels:
       traefik.backend: "homeassistant"
       traefik.port: 8123
