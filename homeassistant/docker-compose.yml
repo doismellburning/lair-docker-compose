@@ -6,7 +6,7 @@ networks:
 
 services:
   hadashboard:
-    image: homeassistant/home-assistant:0.76.2
+    image: homeassistant/home-assistant:0.80.1
     networks:
       - proxy
     volumes:
