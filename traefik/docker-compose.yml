@@ -6,7 +6,7 @@ networks:
 
 services:
   traefik:
-    image: traefik:1.6.6
+    image: traefik:1.7.3
     networks:
       - proxy
     ports:
