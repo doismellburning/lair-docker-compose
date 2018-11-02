@@ -1,6 +1,6 @@
 .PHONY: bootstrap
 bootstrap:
-	docker create network proxy
+	docker network create proxy
 
 .PHONY: udev
 udev:
