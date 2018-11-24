@@ -6,7 +6,7 @@ networks:
 
 services:
   prometheus:
-    image: prom/prometheus
+    image: prom/prometheus:v2.5.0
     networks:
       - proxy
     volumes:
