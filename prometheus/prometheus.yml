@@ -3,3 +3,4 @@ scrape_configs:
     static_configs:
       - targets:
         - 'mazikeen.lair.doismellburning.co.uk:9100'
+        - 'nox.lair.doismellburning.co.uk:9100'
