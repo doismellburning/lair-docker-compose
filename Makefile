@@ -14,3 +14,4 @@ install:
 	systemctl enable docker-compose@hadashboard
 	systemctl enable docker-compose@homeassistant
 	systemctl enable docker-compose@prometheus
+	systemctl enable docker-compose@grafana
