@@ -5,7 +5,7 @@ networks:
     external: true
 
 services:
-  hadashboard:
+  homeassistant:
     image: homeassistant/home-assistant:0.81.0
     networks:
       - proxy
