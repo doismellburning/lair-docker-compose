@@ -5,3 +5,6 @@ services:
     build:
       context: .
     image: doismellburning/imapfilter
+    volumes:
+      - ./imapfilter-doismellburning:/opt/doismellburning/imapfilter
+    command: /opt/doismellburning/imapfilter/loop
