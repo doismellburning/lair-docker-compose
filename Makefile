@@ -2,6 +2,7 @@
 bootstrap:
 	docker network create proxy
 	docker volume create grafana-storage
+	docker volume create prometheus
 
 .PHONY: udev
 udev:
