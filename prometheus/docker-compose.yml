@@ -16,6 +16,11 @@ services:
     volumes:
       - "prometheus:/prometheus"
       - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+      - "./targets.yml:/etc/prometheus/targets.yml"
+#     - type: bind
+#       read_only: true
+#       source: "./targets.yml"
+#       target: "/etc/prometheus/targets.yml"
     labels:
       traefik.backend: "prometheus"
       traefik.port: 9090
