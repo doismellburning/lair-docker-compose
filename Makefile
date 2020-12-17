@@ -1,6 +1,7 @@
 .PHONY: bootstrap
 bootstrap:
 	docker network create proxy
+	docker volume create grafana-storage
 
 .PHONY: udev
 udev:

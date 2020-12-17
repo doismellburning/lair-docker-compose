@@ -4,11 +4,17 @@ networks:
   proxy:
     external: true
 
+volumes:
+  grafana-storage:
+    external: true
+
 services:
   grafana:
     image: grafana/grafana:7.3.5
     networks:
       - proxy
+    volumes:
+      - "grafana-storage:/var/lib/grafana"
     labels:
       traefik.backend: "grafana"
       traefik.port: 3000
