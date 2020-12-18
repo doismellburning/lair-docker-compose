@@ -6,7 +6,7 @@ networks:
 
 services:
   traefik:
-    image: traefik:1.7.7
+    image: traefik:2.4
     networks:
       - proxy
     ports:
@@ -14,8 +14,7 @@ services:
       - 8080:8080
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./traefik.toml:/traefik.toml
-    command: traefik --docker
+      - ./traefik.yml:/etc/traefik/traefik.yml
     labels:
-      traefik.frontend.rule: "Host:traefik.srv.lair.doismellburning.co.uk"
-      traefik.port: 8080
+      traefik.http.routers.traefik.rule: "Host(`traefik.srv.lair.doismellburning.co.uk`)"
+      traefik.http.services.traefik.loadbalancer.server.port: 8080

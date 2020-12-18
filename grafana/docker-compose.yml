@@ -16,6 +16,4 @@ services:
     volumes:
       - "grafana-storage:/var/lib/grafana"
     labels:
-      traefik.backend: "grafana"
-      traefik.port: 3000
-      traefik.frontend.rule: "Host:grafana.srv.lair.doismellburning.co.uk"
+      traefik.http.routers.grafana.rule: Host(`grafana.srv.lair.doismellburning.co.uk`)

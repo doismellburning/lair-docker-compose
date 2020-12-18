@@ -12,6 +12,4 @@ services:
     volumes:
       - "./config:/config:ro" # ro because the image tries to write there and "fix" permissions and other sadness
     labels:
-      traefik.backend: "smokeping"
-      traefik.port: 80
-      traefik.frontend.rule: "Host:smokeping.srv.lair.doismellburning.co.uk"
+      traefik.http.routers.smokeping.rule: Host(`smokeping.srv.lair.doismellburning.co.uk`)
