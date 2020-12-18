@@ -1,0 +1,11 @@
+providers:
+  docker:
+    defaultRule: "Host(`{{ trimPrefix `/` .Name }}.srv.lair.doismellburning.co.uk`)"
+
+api:
+  insecure: true
+
+metrics:
+  prometheus: {}
+
+# accessLog: {}

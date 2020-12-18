@@ -12,6 +12,4 @@ services:
     volumes:
       - "/srv/git/hadashboard:/conf"
     labels:
-      traefik.backend: "hadashboard"
-      traefik.port: 5050
-      traefik.frontend.rule: "Host:hadashboard.srv.lair.doismellburning.co.uk"
+      traefik.http.routers.hadashboard.rule: Host(`hadashboard.srv.lair.doismellburning.co.uk`)

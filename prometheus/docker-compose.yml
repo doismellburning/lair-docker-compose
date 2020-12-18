@@ -22,7 +22,5 @@ services:
 #       source: "./targets.yml"
 #       target: "/etc/prometheus/targets.yml"
     labels:
-      traefik.backend: "prometheus"
-      traefik.port: 9090
-      traefik.frontend.rule: "Host:prometheus.srv.lair.doismellburning.co.uk"
+      traefik.http.routers.prometheus.rule: Host(`prometheus.srv.lair.doismellburning.co.uk`)
     #user: 108:112 # prometheus:prometheus on host - hardcoding of sadness :( - see https://github.com/prometheus/prometheus/issues/3441
