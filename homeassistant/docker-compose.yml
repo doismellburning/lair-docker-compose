@@ -13,4 +13,5 @@ services:
       - "/srv/git/homeassistant-config:/config"
       - "/etc/localtime:/etc/localtime:ro"
     labels:
+      traefik.http.services.homeassistant.loadbalancer.server.port: 8123
       traefik.http.routers.homeassistant.rule: Host(`hass.srv.lair.doismellburning.co.uk`)
