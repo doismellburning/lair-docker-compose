@@ -6,7 +6,7 @@ networks:
 
 services:
   homeassistant:
-    image: homeassistant/home-assistant:0.111.4
+    image: homeassistant/home-assistant:0.118.5
     networks:
       - proxy
     volumes:
