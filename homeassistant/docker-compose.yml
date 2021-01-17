@@ -6,7 +6,7 @@ networks:
 
 services:
   homeassistant:
-    image: homeassistant/home-assistant:2020.12.2
+    image: homeassistant/home-assistant:2021.1.4
     networks:
       - proxy
     volumes:
