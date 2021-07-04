@@ -6,7 +6,7 @@ networks:
 
 services:
   hadashboard:
-    image: acockburn/appdaemon:3.0.1
+    image: acockburn/appdaemon:4.0.8
     networks:
       - proxy
     volumes:
