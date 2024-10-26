@@ -1,5 +1,7 @@
 # lair-docker-compose
 
-docker-compose-based home server setup
+My docker-compose-based home server setup
 
-All the hackery...
+You probably don't want to use this directly yourself, but the contents may be of interest / inspiration.
+
+Caveat user etc.!
